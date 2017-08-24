@@ -11,8 +11,9 @@ body {
 
   height: 100vh;
 
-  font-family: monospace;
-  background-color: lightblue;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Anton', sans-serif;
+  background-color: #8FBC8F;
   text-align: center;
 }
 
@@ -22,5 +23,5 @@ button {
 }
 
 img {
-  max-width: 60%;
+  max-width: 50%;
 }
