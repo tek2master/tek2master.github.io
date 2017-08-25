@@ -24,10 +24,10 @@ var students = [
 ];
 
 var colors = [
-  'hotpink',
+  'MediumOrchid',
   'orange',
   'fuchsia', 0,
-  'lightblue', 0,
+  'peachPuff',
   'black'
 ];
 var cur = 0;
@@ -52,9 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-var pickOnClick = function (event) {
+  var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
   var rand = students[Math.floor(Math.random() * students.length)];
+  var spl = students.splice(rand, 1);
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
