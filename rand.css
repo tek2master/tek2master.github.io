@@ -19,9 +19,11 @@ body {
 }
 ul {
   padding: 0 25px 0 25px;
+  background-color: light blue;
 }
+
 li {
-  background-color: light blue
+  background-color: light blue;
 }
 
 button {
