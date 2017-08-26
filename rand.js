@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 var aListOnClick = function (event) {
-  if (event.target.tagName === 'LI') {
+  if (event.target.tagName === 'UL') {
     event.target.style.textDecoration = 'line-through';
   }
 }
