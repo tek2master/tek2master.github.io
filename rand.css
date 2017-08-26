@@ -13,15 +13,15 @@ body {
 
   font-family: 'PT Sans Narrow', sans-serif;
   font-family: 'Anton', sans-serif;
-  background-color: #203074;
+  background-color: lightyellow;
   text-align: center;
+  text-decoration-color: 20, 131, 161
   list-style: none;
 }
 ul {
   list-style-type: none;
   padding: 0 25px 0 25px;
-  background-color: #B9EAF1;
-  text-decoration-color: #203074;
+  background-color: gold;
 }
 li {
   text-decoration-color: #203074;
@@ -31,7 +31,7 @@ button {
   font-size: 24px;
   font-family: sans-serif;
   color: white;
-  background-color: #93B76B;
+  background-color: black;
 }
 
 button:hover {
@@ -39,9 +39,10 @@ button:hover {
 }
 
 img {
-  max-width: 65%;
+  max-width: 60%;
   height: auto;
   padding-top: -40px;
   padding-bottom: 25px;
+  border-radius: 30%;
 
 }
