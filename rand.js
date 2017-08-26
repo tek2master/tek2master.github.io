@@ -1,4 +1,5 @@
 var pickButton;
+var pickButton2
 var header;
 var body;
 var choice;
@@ -38,17 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
   body = document.getElementById('body');
   header = document.getElementById('header');
   pickButton = document.getElementById('pickButton');
+  pickButton2 = document.getElementById('pickButton2');
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
+  pickButton2.addEventListener('click', pickClickAlert );
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
   for (let i=0; i<students.length; i++) {
-    let ul = document.createElement('ul');
-    ul.innerText = students[i];
-    aList.append(ul);
+    let li = document.createElement('li');
+    li.innerText = students[i];
+    aList.append(li);
   }
 });
 
@@ -67,6 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
     cur += 1;
   }, 200);
+}
+
+var pickClickAlert = function (event) {
+    alert("I'm Just CHILLIN!!");
+var x = window.setInterval(() => {
+  if (colors[cur] === undefined) {
+    window.clearInterval(x);
+    cur = 0;
+    choice.innerText = rand;
+    return;
+  }
+  if (colors[cur]) header.style.color = colors[cur];
+  if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
+  cur += 1;
+}, 200);
 }
 
 var aListOnClick = function (event) {
