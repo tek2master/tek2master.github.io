@@ -13,12 +13,15 @@ body {
 
   font-family: 'PT Sans Narrow', sans-serif;
   font-family: 'Anton', sans-serif;
-  background-color: #8FBC8F;
+  background-color: dark blue;
   text-align: center;
   list-style: none;
 }
 ul {
   padding: 0 25px 0 25px;
+}
+li {
+  background-color: light blue
 }
 
 button {
