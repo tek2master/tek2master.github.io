@@ -13,19 +13,20 @@ body {
 
   font-family: 'PT Sans Narrow', sans-serif;
   font-family: 'Anton', sans-serif;
-  background-color: dark blue;
+  background-color: #203074;
   text-align: center;
   list-style: none;
 }
 ul {
+  list-style-type: none;
   padding: 0 25px 0 25px;
-  background-color: light blue;
+  background-color: #B9EAF1;
+  text-decoration-color: #203074;
 }
-
 li {
-  background-color: light blue;
-}
+  text-decoration-color: #203074;
 
+}
 button {
   font-size: 24px;
   font-family: sans-serif;
