@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
-  pickButton2.addEventListener('click', pickClickAlert );
+  pickButton2.addEventListener('click', pickClickPairs );
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
@@ -72,19 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 200);
 }
 
-var pickClickAlert = function (event) {
-    alert("I'm Just CHILLIN!!");
-var x = window.setInterval(() => {
-  if (colors[cur] === undefined) {
-    window.clearInterval(x);
-    cur = 0;
-    choice.innerText = rand;
-    return;
-  }
-  if (colors[cur]) header.style.color = colors[cur];
-  if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
-  cur += 1;
-}, 200);
+var pickClickPairs = function (event) {
+  choice.innerHTML = '&nbsp;'
+  var rand = students.splice(Math.floor(Math.random() * students.length),1);
+  var rand2 = students.splice(Math.floor(Math.random() * students.length),1);
+  // var spl = students.splice(rand, 1);
+  var x = window.setInterval(() => {
+    if (colors[cur] === undefined) {
+      window.clearInterval(x);
+      cur = 0;
+      choice.innerText = rand + ", " + rand2;
+      return;
+    }
+    if (colors[cur]) header.style.color = colors[cur];
+    if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
+    cur += 1;
+  }, 200);
 }
 
 var aListOnClick = function (event) {
